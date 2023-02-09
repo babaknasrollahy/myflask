@@ -2,4 +2,5 @@ FROM python:3.9.16
 RUN mkdir app && pip install flask
 WORKDIR /app
 COPY app.py .
-ENTRYPOINT [ "flask", "run" ]
+EXPOSE 5000
+CMD [ "flask", "run" ]
