@@ -1,13 +1,5 @@
 version: "2"
 services:
- flask:
-  build:
-   context: .
-   dockerfile: python-Dockerfile
-  container_name: myflask
-  ports:
-   - 5000:5000
-
  proxy:
   build:
    context: .
@@ -17,5 +9,15 @@ services:
    - 80:80
   links:
    - flask
+   
+ flask:
+  build:
+   context: .
+   dockerfile: python-Dockerfile
+  container_name: myflask
+  ports:
+   - 5000:5000
+
+ 
 
 
