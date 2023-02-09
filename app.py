@@ -6,3 +6,6 @@ app = Flask(__name__)
 def say_hello(name):
     get_name = name
     return f"hello {get_name}"
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
