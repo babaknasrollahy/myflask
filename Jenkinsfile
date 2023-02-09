@@ -7,7 +7,7 @@ pipeline
         {
             steps{
                 git branch: 'main', url: 'https://github.com/babaknasrollahy/myflask.git'
-                sh "docker-compose up"
+                sh "docker-compose up -d"
             }
         }
 
